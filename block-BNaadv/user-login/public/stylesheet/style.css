@@ -1,0 +1,35 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+
+form {
+  width: 300px;
+  padding: 0.3rem;
+  margin: 2rem auto;
+  border: 1px solid black;
+  border-radius: 0.8rem;
+  text-align: center;
+}
+
+input {
+  width: 80%;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+
+.red {
+  color: red;
+  font-size: 500;
+  text-align: left;
+}
+
+.green {
+  color: green;
+  font-size: 700;
+  text-align: center;
+}
