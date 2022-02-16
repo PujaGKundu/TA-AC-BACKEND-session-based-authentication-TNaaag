@@ -11,6 +11,10 @@
     <a href="/users">Back</a>
     <a href="/users/login">Login</a>
     <form action="/users/register" method="post">
+      <h2>Register</h2>
+      <% if(error) { %>
+      <p class="red"><%= error %></p>
+      <% } %>
       <input type="text" name="name" placeholder="Name" />
       <input type="email" name="email" placeholder="Email" />
       <input type="text" name="password" placeholder="Password" />

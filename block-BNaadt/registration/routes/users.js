@@ -9,12 +9,22 @@ router.get("/", function (req, res, next) {
 });
 
 router.get("/register", function (req, res, next) {
-  res.render("register");
+  res.render("register", { error: req.flash("error")[0] });
 });
 
 router.post("/register", (req, res, next) => {
   User.create(req.body, (err, user) => {
-    if (err) return next(err);
+    if (err) {
+      if (err.code === 11000) {
+        req.flash("error", "Add a unique email!");
+        return res.redirect("/users/register");
+      }
+      if (err.name === "ValidatorError") {
+        req.flash("error", "err.message");
+        return res.redirect("/users/register");
+      }
+      return res.json({ err });
+    }
     res.redirect("/users/login");
   });
 });
