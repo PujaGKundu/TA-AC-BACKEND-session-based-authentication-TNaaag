@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+  line-height: 1.5;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  margin: 0.4rem;
+}
+
+.container {
+  max-width: 1330px;
+  width: 100%;
+  padding: 0 32px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-30 {
+  flex: 1 1 30%;
+}
+
+.flex-60 {
+  flex: 1 1 60%;
+}
+
+.jc-even {
+  justify-content: space-evenly;
+}
+
+.jc-between {
+  justify-content: space-between;
+}
+
+.ai-start {
+  align-items: flex-start;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1fr;
+}
+
+header {
+  background-color: blanchedalmond;
+  padding: 0.8rem 0;
+  box-shadow: 3px 3px 6px 3px gray;
+}
+
+.p-details {
+  padding: 1rem;
+  width: 250px;
+  text-align: center;
+  height: 350px;
+  box-shadow: 5px 5px 10px 5px gray;
+  margin: 2rem;
+  line-height: 1;
+}
+
+.p-details:hover {
+  transform: scale(1.05);
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.2s;
+}
+
+.p-image {
+  width: 150px;
+  height: 200px;
+}
+
+.btn {
+  padding: 0.3rem 0.6rem;
+  background-color: rgb(6, 6, 78);
+  color: white;
+}
+
+.btn:hover {
+  background-color: rgb(9, 9, 114);
+}
+
+form {
+  width: 400px;
+  box-shadow: 3px 3px 6px 3px gray;
+  padding: 1rem;
+  margin: 2rem auto;
+}
+
+input,
+textarea {
+  width: 80%;
+  padding: 0.3rem;
+  margin: 0.5rem;
+}
+
+.red {
+  color: red;
+  font-size: 400;
+}
+
+.submenu-box {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  width: 80px;
+  text-align: center;
+  display: none;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+}
+
+.submenu li {
+  background-color: blanchedalmond;
+}
+
+.submenu-box:hover .submenu {
+  display: inline-block;
+}
+
+.edit {
+  padding: 0.3rem 0.6rem;
+  background-color: rgb(3, 77, 3);
+  color: white;
+}
+
+.delete {
+  padding: 0.3rem 0.6rem;
+  background-color: red;
+  color: white;
+}
+
+button {
+  border: none;
+}
