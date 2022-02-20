@@ -1,0 +1,33 @@
+<% include partials/header.ejs %>
+
+<div class="container">
+  <h1>Product Details</h1>
+  <div class="flex jc-between ai-start">
+    <div class="flex-30">
+      <img
+        src="data:image/<%=product.image.contentType%>;base64,
+                        <%=product.image.data.toString('base64')%>"
+      />
+    </div>
+    <div class="flex-60 align-left">
+      <div>
+        <h2>Name: <%= product.name %></h2>
+        <h3>Description: <%= product.description %></h3>
+        <h3>Category: <%= product.category %></h3>
+        <h3>Type: <%= product.type %></h3>
+        <h3>Rs.: <%= product.price %></h3>
+      </div>
+
+      <div>
+        <a href="/products/<%= product.id %>/edit">
+          <button class="edit">Update</button>
+        </a>
+        <a href="/products/<%= product.id %>/delete">
+          <button class="delete">Delete</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include partials/footer.ejs %>
