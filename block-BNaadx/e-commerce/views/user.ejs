@@ -1,0 +1,30 @@
+<% include partials/header-u.ejs %>
+
+<div class="container">
+  <h1>Register/Login to add products to cart</h1>
+  <div class="grid">
+    <% items.sort().forEach(function(image) { %>
+
+    <div class="p-details">
+      <a href="">
+        <div>
+          <img
+            class="p-image"
+            src="data:image/<%=image.image.contentType%>;base64,
+                            <%=image.image.data.toString('base64')%>"
+          />
+          <div>
+            <h3><%= image.name %></h3>
+            <div class="flex jc-even">
+              <h4>Rs. <%= image.price %></h4>
+              <a class="btn" href="">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <% }) %>
+  </div>
+</div>
+
+<% include partials/footer.ejs %>

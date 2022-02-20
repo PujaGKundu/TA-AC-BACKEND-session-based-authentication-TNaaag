@@ -1,0 +1,75 @@
+<% include partials/header.ejs %>
+
+<div class="container">
+  <h1>Update Product Detail</h1>
+  <hr />
+  <div>
+    <form action="/products/<%= product.id %>" method="POST">
+      <div>
+        <label for="name">Product Name</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Name of Product"
+          value="<%= product.name %>"
+          name="name"
+        />
+      </div>
+      <div>
+        <label for="desc">Product Description</label>
+        <textarea
+          id="desc"
+          name="description"
+          rows="2"
+          placeholder="Description"
+        >
+<%= product.description %>
+        </textarea>
+      </div>
+      <div>
+        <label for="category">Product Category</label>
+        <input
+          type="text"
+          id="category"
+          placeholder="Category of Product"
+          value="<%= product.category %>"
+          name="category"
+        />
+      </div>
+      <div>
+        <label for="type">Product Type</label>
+        <input
+          type="text"
+          id="type"
+          placeholder="Type of Product"
+          value="<%= product.type %>"
+          name="type"
+        />
+      </div>
+      <div>
+        <label for="image">Product Image</label>
+        <input
+          type="file"
+          id="image"
+          name="image"
+          value="<%= product.image %>"
+        />
+      </div>
+      <div>
+        <label for="price">Price of Product</label>
+        <input
+          type="number"
+          id="price"
+          name="price"
+          placeholder="Price"
+          value="<%= product.price %>"
+        />
+      </div>
+      <div>
+        <button class="btn" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<% include partials/footer.ejs %>
